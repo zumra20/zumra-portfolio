@@ -216,11 +216,12 @@ p {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Hero — compact, no huge empty space */
+/* Hero — compact, left-aligned */
 .hero {
   position: relative;
   padding: 2.75rem 0 2.5rem;
   overflow: hidden;
+  text-align: left;
 }
 
 .hero-backdrop {
@@ -233,11 +234,19 @@ p {
 .hero-inner {
   position: relative;
   max-width: 640px;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+.hero-inner > * {
+  text-align: left;
 }
 
 .hero-availability {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.4rem;
   font-size: 0.72rem;
   font-weight: 600;
@@ -282,12 +291,14 @@ p {
   color: var(--text-muted);
   max-width: 34rem;
   margin-bottom: 0.9rem;
+  margin-inline: 0;
   line-height: 1.55;
 }
 
 .hero-focus {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 0.35rem;
   margin-bottom: 1.25rem;
 }
@@ -304,6 +315,7 @@ p {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 0.55rem;
 }
 

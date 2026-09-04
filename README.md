@@ -1,6 +1,6 @@
 # Zumra Siddique — Flutter Developer Portfolio
 
-**Live site:** [https://zumra20.github.io/flutter-developer-portfolio/](https://zumra20.github.io/flutter-developer-portfolio/)
+**Live site:** [https://zumra20.github.io/zumra-portfolio/](https://zumra20.github.io/zumra-portfolio/)
 
 ## Run locally
 
@@ -8,6 +8,8 @@
 npm install
 npm run dev
 ```
+
+Open: [http://localhost:5173/zumra-portfolio/](http://localhost:5173/zumra-portfolio/)
 
 ## Deploy
 

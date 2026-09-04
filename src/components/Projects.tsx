@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { projects, type Project } from '../data/content'
 import { SectionReveal } from './SectionReveal'
+import { assetUrl } from '../utils/assetUrl'
 
 function ProjectCard({ project }: { project: Project }) {
   const [activeIndex, setActiveIndex] = useState(0)
   const hasImages = project.images.length > 0
-  const activeImage = hasImages ? project.images[activeIndex] : null
+  const activeImage = hasImages ? assetUrl(project.images[activeIndex]) : null
 
   return (
     <article className="project-card">
@@ -37,7 +38,7 @@ function ProjectCard({ project }: { project: Project }) {
                 className={`project-thumb${index === activeIndex ? ' is-active' : ''}`}
                 onClick={() => setActiveIndex(index)}
               >
-                <img src={image} alt="" loading="lazy" />
+                <img src={assetUrl(image)} alt="" loading="lazy" />
               </button>
             ))}
           </div>
